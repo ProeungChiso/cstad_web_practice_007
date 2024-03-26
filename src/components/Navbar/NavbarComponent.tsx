@@ -60,11 +60,8 @@ export default function NavbarComponent() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
               className="w-full"
-              href="#"
+              href={item.path}
               size="lg"
             >
               {item.title}
