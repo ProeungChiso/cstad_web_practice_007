@@ -68,6 +68,14 @@ export default function NavbarComponent() {
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+            <Link
+              className="w-full"
+              href="/login"
+              size="lg">
+              Login
+            </Link>
+          </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
