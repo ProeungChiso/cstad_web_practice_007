@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Koulen, Oswald, Roboto } from "next/font/google";
 import "./globals.css";
 import NextUILayout from "./NextUIProvider";
 import NavbarComponent from "@/components/Navbar/NavbarComponent";
+import FooterComponent from "@/components/Footer/FooterComponent";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"] 
+});
+const oswald = Oswald({ 
+  subsets: ["latin"], 
+  weight:"300",
+  display:"swap"
+});
+const koulen = Koulen({
+  weight:"400",
+  subsets:["khmer"]
+})
 
 export const metadata: Metadata = {
   title: {
@@ -32,10 +44,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={oswald.className}>
         <NextUILayout>
           <NavbarComponent/>
           {children}
+          <FooterComponent/>
         </NextUILayout>
       </body>
     </html>

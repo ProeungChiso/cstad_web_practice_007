@@ -1,3 +1,4 @@
+import { koulen } from '@/app/font';
 import { Metadata } from 'next';
 import React from 'react';
 export const metadata: Metadata = {
@@ -17,6 +18,15 @@ export const metadata: Metadata = {
   };
 export default function logIn(){
     return(
-        <h1>Login</h1>
+      <>
+      <div className={koulen.className}>
+      <div className="container mx-auto my-10">
+        <h1 className="text-center text-blue-700 text-2xl mb-10 font-extrabold">
+          ចូលប្រើ
+        </h1>
+        <p className="text-center">មិនមានមាតិកា</p>
+      </div>
+      </div>
+    </>
     )
 }
